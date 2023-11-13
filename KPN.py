@@ -14,7 +14,7 @@ class KPN:
         self.nbrs  = {}
 
         for node in self.nodes:
-            nbrs = nx.neighbors(self.G, node)
+            nbrs = list(nx.neighbors(self.G, node))
             self.nbrs[node] = nbrs
 
         self.ks = {} # 存放 k-shell 的值
